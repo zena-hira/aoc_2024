@@ -1,8 +1,7 @@
 from timeit import timeit
 
 from solutions import *
-from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7, aoc_8, aoc_9, aoc_10, aoc_11, aoc_12, aoc_13, \
-    aoc_14, aoc_15, aoc_16, aoc_17, aoc_18, aoc_19, aoc_20, aoc_21, aoc_22, aoc_23, aoc_24, aoc_25
+from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7, aoc_8, aoc_9
 import pandas as pd
 
 def read_in(filename):
@@ -13,42 +12,58 @@ def read_lines(filename):
     with open(filename, 'r') as file:
         return [list(map(int, line.strip().replace(',', '').split())) for line in file if line.strip()]
 
+def read_lines_str(filename):
+    with open(filename, 'r') as file:
+        return [list(line.strip().split()) for line in file if line.strip()]
 
-lines = read_in('inputs/1.txt')
-print('Problem 1 A: ' + str(aoc_1.one(lines)))
-print('Problem 1 B: ' + str(aoc_1.two(lines)))
+def read_str(filename):
+    with open(filename, 'r') as file:
+        return file.readlines()
 
-lines = list(read_lines('inputs/2.txt'))
-print('Problem 2 A: ' + str(aoc_2.one(lines)))
-print('Problem 2 B: ' + str(aoc_2.two(lines)))
+def read_file_as_str(filename):
+    with open(filename, 'r') as file:
+        return [line.strip() for line in file]
 
-lines = open('inputs/3.txt', 'r').read()
-print('Problem 3 A: ' + str(aoc_3.one(lines)))
-print('Problem 3 B: ' + str(aoc_3.two(lines)))
+def read_file_as_str2(filename):
+    with open(filename, 'r') as file:
+        return file.read().rstrip()
 
-# lines = list(read_in('inputs/4.txt'))
+# lines = read_in('inputs/1.txt')
+# print('Problem 1 A: ' + str(aoc_1.one(lines)))
+# print('Problem 1 B: ' + str(aoc_1.two(lines)))
+#
+# lines = list(read_lines('inputs/2.txt'))
+# print('Problem 2 A: ' + str(aoc_2.one(lines)))
+# print('Problem 2 B: ' + str(aoc_2.two(lines)))
+#
+# lines = open('inputs/3.txt', 'r').read()
+# print('Problem 3 A: ' + str(aoc_3.one(lines)))
+# print('Problem 3 B: ' + str(aoc_3.two(lines)))
+#
+# lines = list(read_str('inputs/4.txt'))
 # print('Problem 4 A: ' + str(aoc_4.one(lines)))
 # print('Problem 4 B: ' + str(aoc_4.two(lines)))
 #
-# lines = list(read_in('inputs/5.txt'))
-# print('Problem 5 A: ' + str(aoc_5.one(lines)))
-# print('Problem 5 B: ' + str(aoc_5.two(lines)))
-#
-# lines = list(read_in('inputs/6.txt'))
+# rules = list(read_lines_str('inputs/5_rules.txt'))
+# order = list(read_lines_str('inputs/5_order.txt'))
+# print('Problem 5 A: ' + str(aoc_5.one(rules, order)))
+# print('Problem 5 B: ' + str(aoc_5.two(rules, order)))
+# #
+# lines = list(read_file_as_str('inputs/6.txt'))
 # print('Problem 6 A: ' + str(aoc_6.one(lines)))
 # print('Problem 6 B: ' + str(aoc_6.two(lines)))
 #
-# lines = list(read_in('inputs/7.txt'))
+# lines = list(read_file_as_str('inputs/7.txt'))
 # print('Problem 7 A: ' + str(aoc_7.one(lines)))
 # print('Problem 7 B: ' + str(aoc_7.two(lines)))
-#
-# lines = list(read_in('inputs/8.txt'))
+
+# lines = list(read_file_as_str('inputs/8.txt'))
 # print('Problem 8 A: ' + str(aoc_8.one(lines)))
 # print('Problem 8 B: ' + str(aoc_8.two(lines)))
 #
-# lines = list(read_in('inputs/9.txt'))
-# print('Problem 9 A: ' + str(aoc_9.one(lines)))
-# print('Problem 9 B: ' + str(aoc_9.two(lines)))
+lines = list(read_file_as_str2('inputs/9.txt'))
+print('Problem 9 A: ' + str(aoc_9.one(lines)))
+print('Problem 9 B: ' + str(aoc_9.two(lines)))
 #
 # lines = list(read_in('inputs/10.txt'))
 # print('Problem 10 A: ' + str(aoc_10.one(lines)))
