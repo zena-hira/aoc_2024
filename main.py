@@ -1,7 +1,7 @@
 from timeit import timeit
 
 from solutions import *
-from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7, aoc_8, aoc_9
+from solutions import aoc_1, aoc_2, aoc_3, aoc_4, aoc_5, aoc_6, aoc_7, aoc_8, aoc_9, aoc_10, aoc_11
 import pandas as pd
 
 def read_in(filename):
@@ -61,17 +61,17 @@ def read_file_as_str2(filename):
 # print('Problem 8 A: ' + str(aoc_8.one(lines)))
 # print('Problem 8 B: ' + str(aoc_8.two(lines)))
 #
-lines = list(read_file_as_str2('inputs/9.txt'))
-print('Problem 9 A: ' + str(aoc_9.one(lines)))
-print('Problem 9 B: ' + str(aoc_9.two(lines)))
+# lines = list(read_file_as_str2('inputs/9.txt'))
+# print('Problem 9 A: ' + str(aoc_9.one(lines)))
+# print('Problem 9 B: ' + str(aoc_9.two(lines)))
 #
-# lines = list(read_in('inputs/10.txt'))
+# lines = list(read_file_as_str('inputs/10.txt'))
 # print('Problem 10 A: ' + str(aoc_10.one(lines)))
 # print('Problem 10 B: ' + str(aoc_10.two(lines)))
 #
-# lines = list(read_in('inputs/11.txt'))
-# print('Problem 11 A: ' + str(aoc_11.one(lines)))
-# print('Problem 11 B: ' + str(aoc_11.two(lines)))
+lines = list(read_file_as_str('inputs/11.txt'))
+print('Problem 11 A: ' + str(aoc_11.one(lines)))
+print('Problem 11 B: ' + str(aoc_11.two(lines)))
 #
 # lines = list(read_in('inputs/12.txt'))
 # print('Problem 12 A: ' + str(aoc_12.one(lines)))
